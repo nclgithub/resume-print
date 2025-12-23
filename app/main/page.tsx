@@ -1,12 +1,10 @@
 import Image from "next/image";
 import myphoto from "../public/my-photo.png";
-import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect('/main');
-
   return (
     <div>
+      kjlxdkljasdjlk
     </div>
   );
 }
