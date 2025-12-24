@@ -1,0 +1,12 @@
+.navbar-menu {
+  margin: 0 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-menu:hover {
+  background-color: #f0f0f0;
+}
