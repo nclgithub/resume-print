@@ -3206,6 +3206,14 @@ video {
   margin-right: calc(.5rem*var(--tw-space-x-reverse))
 }
 
+.space-x-3 {
+  :where(& > :not(:last-child)) {
+    --tw-space-x-reverse: 0;
+    margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
+    margin-inline-end: 0;
+  }
+}
+
 .space-x-3>:not([hidden])~:not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-left: calc(.75rem*(1 - var(--tw-space-x-reverse)));

@@ -1,14 +1,10 @@
 import puppeteer from 'puppeteer';
 
-export async function GET(req) {
-    const { searchParams } = new URL(req.url);
-    const data = searchParams.get('data');
-    let parsedData = JSON.parse(decodeURIComponent(data))
-
+export async function GET() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto('http://localhost:3000/pdf?data=' + encodeURIComponent(JSON.stringify(parsedData)), { waitUntil: 'networkidle0' });
+    await page.goto('http://localhost:3000/pdf', { waitUntil: 'networkidle0' });
 
     const pdfBuffer = await page.pdf({
         path: 'resume.pdf',

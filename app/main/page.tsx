@@ -45,7 +45,7 @@ export default function ResumePDF() {
 
   const generatePDF = async () => {
     setIsLoading(true);
-    const res = await fetch("/api/pdf?data=" + encodeURIComponent(JSON.stringify(data)));
+    const res = await fetch("/api/pdf");
     const blob = await res.blob(); // directly get Blob from response
     const blobUrl = URL.createObjectURL(blob);
     setIsLoading(false);
